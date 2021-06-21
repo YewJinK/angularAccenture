@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="card login-form">
+    <div class="card-body">
+      <h3 class="card-title text-center text-danger text-underline">Register in to Accenture</h3>
+      <app-sign-up (PostData)="getRegisteredUser($event)" [user]="user"></app-sign-up>
+    </div>
+  </div>
+  <app-user-data-display [userList]="allUser"></app-user-data-display>
+  <button (click)="updateUser()">Update Username</button>
+</div>

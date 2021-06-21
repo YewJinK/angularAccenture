@@ -1,0 +1,19 @@
+.imgRotate {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: relative;
+  animation-name: rotateImg;
+  animation-delay: 2s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotateImg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,27 @@
+header,
+header nav ul {
+  display: flex;
+}
+
+header div {
+  flex: 1;
+}
+header nav {
+  flex: 11;
+}
+header nav li {
+  flex: 1;
+}
+li {
+  list-style: none;
+}
+nav ul li a {
+  font-size: 26px;
+  color: gold;
+}
+nav ul {
+  margin-top: 35px;
+}
+header {
+  border-bottom: 1px solid #ccc;
+}

@@ -1,0 +1,12 @@
+nav #services {
+  display: block !important;
+}
+
+#services {
+  position: absolute;
+  top: 67px;
+  z-index: 1;
+}
+.navbar-nav li {
+  flex: 1;
+}

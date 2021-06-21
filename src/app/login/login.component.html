@@ -1,0 +1,42 @@
+<div class="global-container">
+  <div class="card login-form">
+    <div class="card-body">
+      <h3 class="card-title text-center">Log in to Accenture</h3>
+      <div class="card-text">
+        <!--
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
+        <form #f="ngForm" (ngSubmit)="onSubmit()">
+          <!-- to error: add class "has-danger" -->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1"
+              aria-describedby="emailHelp" name="username" #username="ngModel" [(ngModel)]="user"
+              [ngClass]="{'is-invalid': f.submitted && username.invalid}" required minlength="6">
+            <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+              <p *ngIf="username.errors.required">
+                Username field can't be blank
+              </p>
+              <div *ngIf="username.errors.minlength">Username should be min of 6 characters.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <a href="#" style="float:right;font-size:12px;">Forgot password?</a>
+            <input type="password" class="form-control form-control-sm" id="exampleInputPassword1" #password="ngModel"
+              [(ngModel)]="pass" name="password" [ngClass]="{'is-invalid': f.submitted && password.invalid}" required>
+            <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+              <div *ngIf="password.errors.required">
+                Password field can't be blank
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+
+          <div class="sign-up">
+            Don't have an account? <a href="#" routerLink="/signup">Create One</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

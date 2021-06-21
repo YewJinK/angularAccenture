@@ -1,0 +1,53 @@
+<div class="card-text" (scroll)="onScroll($event)" style="height: 250px;">
+  <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+    <div class="form-group">
+      <label>Firstname</label>
+      <input type="text" name="firstname" #fname appHighlight [highlighter]="'yellow'" class="form-control"
+        formControlName="firstname" [ngClass]="{'is-invalid': submited && f.firstname.errors }" />
+      <div *ngIf="submited && f.firstname.errors" class="invalid-feedback">
+        <div *ngIf="f.firstname.errors.required">First Name should not be empty!</div>
+      </div>
+    </div>
+    <div class=" form-group">
+      <label>Lastname</label>
+      <input type="text" name="lastname" appHighlight [highlighter]="'blue'" class="form-control"
+        formControlName="lastname" [ngClass]="{'is-invalid': submited && f.lastname.errors }" />
+      <div *ngIf="submited && f.lastname.errors" class="invalid-feedback">
+        <div *ngIf="f.lastname.errors.required">Last Name should not be empty!</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" name="email" appHighlight [highlighter]="'red'" class="form-control"
+        formControlName="useremail" [ngClass]="{'is-invalid': submited && f.useremail.errors }" />
+      <div *ngIf="submited && f.useremail.errors" class="invalid-feedback">
+        <div *ngIf="f.useremail.errors.required">Email should not be empty!</div>
+        <div *ngIf="f.useremail.errors.email">Please enter the valid email!</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Country</label>
+      <select class="form-control" formControlName="country" [ngClass]="{'is-invalid': submited && f.country.errors }">
+        <option value="">...Select...</option>
+        <option value="SG">Singapore</option>
+        <option value="IN">India</option>
+        <option value="USA">United States</option>
+      </select>
+      <div *ngIf="submited && f.country.errors" class="invalid-feedback">
+        <div *ngIf="f.country.errors.required">Country should not be empty!</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Address</label>
+      <textarea class="form-control" formControlName="address"
+        [ngClass]="{'is-invalid': submited && f.address.errors }"></textarea>
+      <div *ngIf="submited && f.address.errors" class="invalid-feedback">
+        <div *ngIf="f.address.errors.required">Country should not be empty!</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="submit" name="signup" class="btn btn-danger float-end" />
+    </div>
+  </form>
+  <input #nameInput placeholder="Enter Your Name">
+</div>
