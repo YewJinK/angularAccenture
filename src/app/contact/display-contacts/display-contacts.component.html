@@ -1,0 +1,25 @@
+<section class="container-fluid p-5">
+    <div class="row">
+        <div class="col-md-3"><h3>Registered Contacts</h3></div>
+        <div class="col-md-3"><input type="submit" (click)="clearContacts()" class="btn btn-primary" value="Clear All Contacts"/></div>
+    </div>
+    <br>
+    <table class="table table-striped table-bordered table-responsive">
+        <thead class="table-primary">
+            <tr class="align-text-top">
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let guest of registered" >
+                <th>{{guest.name}}</th>
+                <td>{{guest.email}}</td>
+                <td>{{guest.phone}}</td>
+                <td>{{guest.message}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

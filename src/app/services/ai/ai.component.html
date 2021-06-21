@@ -1,1 +1,18 @@
-<p>ai works!</p>
+<section>
+    <h1>The Business Benefits of AI</h1>
+    <img src="../../../assets/images/ai/ai_main.jpg" style="width: 100%">
+    <p>
+        In the past, companies had to rely on data scientists to analyze their data and detect trends. Due to the
+        enormous amount of data available and the limited time in their workday, it was nearly impossible for them to
+        detect every trend or beneficial piece of information.
+        <br><br>
+        Now, through the use of artificial intelligence, data can be analyzed and sorted in real-time. In turn,
+        organizations are able to increase the speed of optimization when it comes to business decisions, ultimately
+        achieving greater outcomes at a quicker pace. These outcomes can be as small as improving internal business
+        processes, to as large as improving the efficiency of traffic in large cities.
+        <br><br>
+        The other benefits of AI are almost limitless. Let’s dive into how organizations can take advantage.
+    </p>
+    <button type="button" (click)="onSumbit()">Discover</button>
+</section>
+<app-ai-details (ShowDetails)="populateChildHtml($event)"></app-ai-details>

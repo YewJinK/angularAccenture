@@ -1,0 +1,15 @@
+section:not(.details) {
+    padding: 10px;
+    width: 75%;
+}
+section.details {
+    border: solid 2px blue;
+    border-radius: 20px 0 20px 0;
+    padding: 10px;
+    margin: 10px;
+}
+span {
+    color: blue;
+    padding: 5px;
+    border-radius: 5px;
+}

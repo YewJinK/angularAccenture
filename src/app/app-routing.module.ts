@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { CareersComponent } from './careers/careers.component';
 import { ContactComponent } from './contact/contact.component';
+import { DisplayContactsComponent } from './contact/display-contacts/display-contacts.component';
 import { HomeComponent } from './home/home.component';
 import { IndustriesComponent } from './industries/industries.component';
 import { InsightsComponent } from './insights/insights.component';
@@ -40,6 +41,9 @@ const routes: Routes = [
   },
   {
     path:'signup',component: ListOfRegisteredUsersComponent
+  },
+  {
+    path:'display-contact',component: DisplayContactsComponent
   },
   {
     path:'**',component: PageNotFoundComponent

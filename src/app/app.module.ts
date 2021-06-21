@@ -28,6 +28,7 @@ import { UserDataDisplayComponent } from './user-data-display/user-data-display.
 import { HighlightDirective } from './_directives/highlight.directive';
 import { CustomLoopDirective } from './_directives/custom-loop.directive';
 import { RotateAnimationDirective } from './_directives/rotate-animation.directive';
+import { DisplayContactsComponent } from './contact/display-contacts/display-contacts.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { RotateAnimationDirective } from './_directives/rotate-animation.directi
     UserDataDisplayComponent,
     HighlightDirective,
     CustomLoopDirective,
-    RotateAnimationDirective
+    RotateAnimationDirective,
+    DisplayContactsComponent,
   ],
   imports: [
     BrowserModule,

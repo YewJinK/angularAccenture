@@ -11,10 +11,11 @@ import { FinanceComponent } from './finance/finance.component';
 import { ServiceNotFoundComponent } from './service-not-found/service-not-found.component';
 import { BankingTitleComponent } from './banking/banking-title/banking-title.component';
 import { BankingDescriptionComponent } from './banking/banking-description/banking-description.component';
+import { AiDetailsComponent } from './ai/ai-details/ai-details.component';
 
 
 @NgModule({
-  declarations: [ServicesComponent,SupplyChainComponent, BankingComponent, AiComponent, BusinessStrategyComponent, FinanceComponent, ServiceNotFoundComponent, BankingTitleComponent, BankingDescriptionComponent],
+  declarations: [ServicesComponent,SupplyChainComponent, BankingComponent, AiComponent, BusinessStrategyComponent, FinanceComponent, ServiceNotFoundComponent, BankingTitleComponent, BankingDescriptionComponent, AiDetailsComponent],
   imports: [
     CommonModule,
     ServicesRoutingModule
