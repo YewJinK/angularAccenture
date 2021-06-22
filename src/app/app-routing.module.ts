@@ -46,6 +46,9 @@ const routes: Routes = [
     path:'display-contact',component: DisplayContactsComponent
   },
   {
+    path:'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
+  },
+  {
     path:'**',component: PageNotFoundComponent
   }
 ];

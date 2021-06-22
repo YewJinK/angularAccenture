@@ -1,0 +1,17 @@
+<section class="container">
+    <section class="row">
+        <h1>List of Posts
+          <span class="fa fa-plus-circle float-end" title="Create new post"></span>
+        </h1>
+      <section class="col-md-3" *ngFor="let service of posts,trackBy: trackByFn">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{service.title}}</h5>
+            <p class="card-text">{{service.body}}</p>
+            <a href="#" routerLink="post-details/{{service.id}}" class="btn btn-danger" id="{{service.title}}">Go
+              Explore</a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>

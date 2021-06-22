@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit,Output,EventEmitter,ViewChild,ElementRef,ChangeDetectionStrategy,DoCheck,OnChanges, Input } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 import { Users } from '../_helpers/interfaces/userDetails';
@@ -16,7 +17,7 @@ export class SignUpComponent implements OnInit {
   @Output() PostData = new EventEmitter<Users>();
   @Input('user') user;
   @ViewChild('fname',{static: false,read:ElementRef}) firstname: ElementRef;
-  constructor(private formBuilder: FormBuilder ) {
+  constructor(private formBuilder: FormBuilder, private http: HttpClient ) {
     this.submited = false;
    }
 
@@ -29,8 +30,7 @@ export class SignUpComponent implements OnInit {
       country:['',Validators.required],
       address:['',Validators.required]
     });
-    console.log("NgOnInit()");
-
+    //console.log("NgOnInit()");
   }
   get f(){
     return this.registerForm.controls;
