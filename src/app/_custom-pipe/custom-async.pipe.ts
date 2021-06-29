@@ -1,8 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { of, interval } from 'rxjs';
-import { from, of } from 'rxjs';
-import { delay } from 'rxjs/internal/operators';
-import { concatMap } from 'rxjs/internal/operators';
+import { of, from } from 'rxjs';
+import { delay, concatMap } from 'rxjs/internal/operators';
 
 @Pipe({
   name: 'customAsync'
