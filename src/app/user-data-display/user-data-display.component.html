@@ -1,4 +1,5 @@
-<table class="table" *ngIf="UserList.length>0">
+<table class="table">
+   <!-- *ngIf="UserList.length>0"> -->
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -7,6 +8,7 @@
       <th scope="col">Email</th>
       <th scope="col">Country</th>
       <th scope="col">Address</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -14,9 +16,13 @@
       <th scope="row">{{i+1}}</th>
       <td>{{user.firstname}}</td>
       <td>{{user.lastname}}</td>
-      <td>{{user.useremail}}</td>
+      <td>{{user.email}}</td>
       <td>{{user.country}}</td>
       <td>{{user.address}}</td>
+      <td>  
+        <a href="javascript:void(0)" (click)="editUser(user)">edit</a> | 
+        <a href="javascript:void(0)" (click)="deleteUser(user.id)">delete</a> 
+       </td>
     </tr>
   </tbody>
 </table>

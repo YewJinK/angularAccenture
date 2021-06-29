@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedServiceService } from '../_services/shared-service.service';
 
 @Component({
   selector: 'app-services',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ServicesComponent implements OnInit {
   homePageServices:any;
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, private sharedService: SharedServiceService) { }
 
   ngOnInit() {
     this.homePageServices = [
@@ -37,7 +38,10 @@ export class ServicesComponent implements OnInit {
         description:'Leaders have doubled down on tech—and are growing 5x faster than Laggards.'
       }
     ]
+
+    //this.sharedService.SharingData.next(this.homePageServices);
   }
+  
   trackByFn(index){
     return index;
   }

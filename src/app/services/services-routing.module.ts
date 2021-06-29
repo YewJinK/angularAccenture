@@ -28,11 +28,11 @@ const routes: Routes = [
   },
   {
     path: 'business-strategy', component:BusinessStrategyComponent
-  }
-  // {
-  //   path: '**', component: ServiceNotFoundComponent
+  },
+  {
+    path: '**', component: ServiceNotFoundComponent
 
-  // }
+  }
 
 ];
 

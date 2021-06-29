@@ -1,52 +1,47 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about.component';
 import { CareersComponent } from './careers/careers.component';
-import { ContactComponent } from './contact/contact.component';
-import { DisplayContactsComponent } from './contact/display-contacts/display-contacts.component';
 import { HomeComponent } from './home/home.component';
-import { IndustriesComponent } from './industries/industries.component';
-import { InsightsComponent } from './insights/insights.component';
 import { ListOfRegisteredUsersComponent } from './list-of-registered-users/list-of-registered-users.component';
-import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { Login } from './_guards/login.service';
-import { UnsavedChangesGuard } from './_guards/un-saved-changes-guard.service';
-
+import { RxjsOperatorsComponent } from './rxjs-operators/rxjs-operators.component';
 
 const routes: Routes = [
   {
     path:'', component: HomeComponent
   },
   {
-    path:'insights', component: InsightsComponent
+    path:'insights', loadChildren: () => import('./insights/insights.module').then(m => m.InsightsModule)
   },
   {
     path:'services', loadChildren: () => import('./services/services.module').then(m => m.ServicesModule)
   },
+  // {
+  //   path:'careers', component: CareersComponent
+  // },
   {
-    path:'careers', component: CareersComponent
+    path:'industries', loadChildren: () => import('./industries/industries.module').then(m => m.IndustriesModule)
   },
   {
-    path:'industries', component: IndustriesComponent,canActivate:[Login]
+    path:'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
   },
   {
-    path:'about', component: AboutComponent
+    path:'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
   },
   {
-    path:'contact', component: ContactComponent
-  },
-  {
-    path:'login', component: LoginComponent,canDeactivate:[UnsavedChangesGuard]
+    path:'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
   {
     path:'signup',component: ListOfRegisteredUsersComponent
   },
   {
-    path:'display-contact',component: DisplayContactsComponent
+    path:'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
   },
   {
-    path:'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
+    path:'rxjs-operators', component: RxjsOperatorsComponent
+  },
+  {
+    path:'material-examples', loadChildren: () => import('./_material/_material.module').then(m => m.MaterialModule)
   },
   {
     path:'**',component: PageNotFoundComponent

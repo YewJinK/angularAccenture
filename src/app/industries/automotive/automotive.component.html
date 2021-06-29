@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <div class="card-login-form">
+        <div class="card-body" style="text-align: center;">
+        <label style="font-size: large;margin-right:50px;">Enter the number of cars to buy:</label>
+        <input #number style="margin-right:50px;width: 100px;">
+        <button class="btn btn-primary" type="button" (click) = "showCars(number.value)">Show Cars</button>
+        </div>
+    </div>
+</div>
+
+<app-cars></app-cars>

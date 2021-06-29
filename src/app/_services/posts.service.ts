@@ -22,4 +22,9 @@ export class PostsService {
     
     return this.http.post(environment.apiHost+'/posts', payload);
   }
+
+  updatePost(payload):Observable<any>{
+    
+    return this.http.put(environment.apiHost+'/posts', payload);
+  }
 }

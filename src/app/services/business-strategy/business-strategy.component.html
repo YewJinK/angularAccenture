@@ -1,1 +1,50 @@
-<p>business-strategy works!</p>
+<h2>Predefined Pipes</h2>
+<h4>Date Pipe</h4>
+<ul>
+    <li>Today = {{today | date}}</li>
+    <li>Today = {{today | date:"MM/dd/yy"}}</li>
+    <li>Today = {{today | date:"MM/dd/yyyy"}}</li>
+    <li>Today = {{today | date:"dd/MM/yyyy"}}</li>
+    <li>Today = {{today | date:"dd/MM/yyyy hh:mm"}}</li>
+</ul>
+
+<h4>Uppercase & Lowercase</h4>
+<ul>
+    <li>{{firstname | uppercase}} {{lastname | uppercase}}</li>
+    <li>{{firstname | lowercase}} {{lastname | lowercase}}</li>
+</ul>
+
+<h4>Currency pipe</h4>
+<ul>
+    <li>{{productPrice | currency}}</li>
+    <li>{{productPrice | currency:'INR'}}</li>
+    <li>{{productPrice | currency:'EUR'}}</li>
+</ul>
+
+<h4>Decimal pipe</h4>
+<ul>
+    <li>{{discountPrice | number:'1.2-3'}}</li>
+    <li>{{discountPrice | number:'1.2-2'}}</li>
+    <li>{{discountPrice | number:'1.2-2'}}</li>
+</ul>
+
+<h4>JSON pipe</h4>
+<ul>
+    <li>{{userData | json}}</li>
+</ul>
+
+<h4>Async pipe</h4>
+<ul>
+    <li>{{gstCalculation()}}</li>
+</ul>
+
+<h4>Custom pipe - welcome</h4>
+<ul>
+    <li>{{message | welcome}}</li>
+    <li>{{intro | combined:'-'}}</li>
+</ul>
+
+<h4>Custom pipe - async with specified interval (in seconds)</h4>
+<ul>
+    <li *ngFor="let data of arrayData | customAsync:0.5">{{data}}</li>
+</ul>

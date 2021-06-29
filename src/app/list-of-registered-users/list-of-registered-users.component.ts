@@ -35,10 +35,7 @@ export class ListOfRegisteredUsersComponent implements OnInit,AfterViewInit {
   }
   ngAfterViewChecked(){
     this.usersFromChild = this.child.usersData;
-    console.log(this.usersFromChild);
-  }
-  updateUser(){
-    this.user.name = "Murali";
+    //console.log(this.usersFromChild);
   }
 
 }
